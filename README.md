@@ -40,7 +40,7 @@ After that Kasumi updates itself. It checks in the background, or use Kasumi > C
 - Built-in ad and tracker blocker with updatable filter lists, a per-site allowlist and a shield button
 - Passkey support
 - Search suggestions and history can be turned off
-- Bring your logins over from Brave (cookies only, no passwords or extensions)
+- Import logins, bookmarks and history from Chrome, Brave, Edge, Arc, Vivaldi, Opera, Comet, Firefox, Zen and Safari, or from an exported bookmarks file. Passwords and extensions stay behind
 
 **Extensions**
 - Install extensions from the Chrome Web Store and use them from the toolbar
@@ -103,6 +103,7 @@ You need macOS 14+ and Xcode 15+ (or the Swift 5.9 toolchain).
 
 - Quick: `swift run` in this folder
 - Xcode: open `Package.swift` and press Run
+- Check what the importer can see: `.build/debug/Kasumi --check-import`
 - Real app: `./build-app.sh` makes `Kasumi.app`, signed with your Apple Development certificate if you have one
 - Release: `./release.sh <version> "notes"` builds, zips and publishes to GitHub
 
