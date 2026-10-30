@@ -14,8 +14,13 @@ After that Kasumi updates itself. It checks in the background, or use Kasumi > C
 
 ## What it does
 
+**Two layouts**
+- Sidebar: vertical tabs down the side, with a command bar on ⌘T
+- Top tabs: tabs along the top like Chrome, Brave and Safari, and ⌘T opens a new tab
+- Pick one in the first-run welcome and switch any time in Settings > Appearance
+
 **Tabs and Spaces**
-- Vertical tab sidebar with pinned tabs, folders, drag to reorder, and a compact mode
+- Pinned tabs, folders, drag to reorder, and a compact mode (sidebar layout)
 - Spaces, each with its own color, icon, cookies and logins, like separate profiles
 - Unused tabs are archived automatically, and you can restore them later
 - Reopen closed tabs, duplicate tabs, close other tabs, close tabs below, close duplicates, sort by site
@@ -60,13 +65,13 @@ After that Kasumi updates itself. It checks in the background, or use Kasumi > C
 
 | Key | Action |
 |---|---|
-| ⌘T | New tab (command bar) |
+| ⌘T | New tab (command bar in Sidebar layout, a blank tab in Top tabs) |
 | ⌘L | Go to address or search tabs |
 | ⌥⌘P | New private tab |
 | ⌘W / ⇧⌘T | Close / reopen tab |
 | ⌘1–9 | Jump to tab |
 | ⌃Tab / ⌃⇧Tab | Next / previous tab |
-| ⌘S | Toggle sidebar |
+| ⌘S | Toggle sidebar (Sidebar layout) |
 | ⇧⌘\ | Toggle split view |
 | ⌥⌘S / ⌥⌘L | Swap split panes / stack or side by side |
 | ⌃1–9 | Switch Space |
