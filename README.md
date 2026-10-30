@@ -1,106 +1,111 @@
-<p align="center">
-  <img src="assets/icon.png" width="128" alt="Kasumi icon">
-</p>
+# Kasumi
 
-<h1 align="center">Kasumi</h1>
+A fast, good-looking browser for macOS, in the style of Arc and Zen. Vertical tabs, Spaces, split view and a command bar, built natively in SwiftUI on top of WebKit.
 
-<p align="center">
-  A Zen/Arc-style web browser for macOS, built with SwiftUI on the WebKit engine.<br>
-  Vertical tabs, Spaces with separate logins, a built-in ad blocker, and more.
-</p>
-
-<p align="center">
-  <a href="https://github.com/RealSkyskysun/Kasumi/releases/latest"><b>Download the latest release</b></a>
-</p>
-
----
-
-## Features
-
-**Browsing**
-- **Vertical tab sidebar** with pinned tabs, drag-to-reorder, and a compact mode
-- **Command bar** (⌘T / ⌘L) to open a URL, search the web with live suggestions, or jump to an open tab
-- **Split view** to show two pages side by side
-- **Find in page, zoom, print**, and the Web Inspector (right-click → Inspect Element)
-- **Bookmarks, history and downloads** in one Library
-- **Session restore**: your tabs come back when you reopen the app
-
-**Spaces**
-- Each Space is its own profile with **separate cookies and logins**, so you can keep work, school and personal accounts apart
-- Pick an icon and a color for every Space; the whole window is tinted to match
-- **Cooldown alarm** (optional): set a time like 3:00 PM, hover the Space's icon and start it. The icon shows a ring counting down to that time and a check mark when it's over. It's a reminder only and doesn't block anything.
-
-**Privacy and blocking**
-- Built-in **ad and tracker blocker** using community filter lists (EasyList, EasyPrivacy, uBlock Origin, AdGuard, Brave and others), plus YouTube ad blocking
-- Pause blocking for a single site with the shield button
-- Choose your search engine (Google, Bing or DuckDuckGo) and turn search suggestions and favicons on or off in Settings
-
-**Extras**
-- **Passkeys** through Kasumi's own built-in authenticator
-- **Chrome extensions** and the Chrome Web Store, on macOS 15.4 or newer (uses WebKit's web extension support)
-- **Import logins from Brave**
-- **In-app updates** that check this repo's Releases
-- **AI Tools** (optional): lets AI chat sites such as claude.ai and chatgpt.com run a small set of tools on your Mac (read and write files, list folders, run commands). Every call asks for your approval by default. See [A note on AI Tools](#a-note-on-ai-tools).
+Kasumi is Mac only and needs macOS 14 or later. On macOS 26 and later, Settings and some panels use Liquid Glass.
 
 ## Install
 
-1. Download `Kasumi-<version>.zip` from the [latest release](https://github.com/RealSkyskysun/Kasumi/releases/latest).
-2. Unzip it and drag **Kasumi.app** into your Applications folder.
-3. The first time you open it, macOS may say the app can't be checked for malware, because Kasumi isn't notarized by Apple. Right-click the app and choose **Open**, then **Open** again. Or go to **System Settings → Privacy & Security** and click **Open Anyway**.
+1. Download the latest `Kasumi-x.y.z.zip` from the [Releases page](https://github.com/RealSkyskysun/Kasumi/releases).
+2. Unzip it and drag `Kasumi.app` into Applications.
+3. The first time, right-click the app and choose Open. Kasumi is not notarized by Apple, so macOS asks once.
 
-After that, Kasumi checks for updates by itself (Settings → Updates) and can also be updated from the app menu with **Check for Updates…**.
+After that Kasumi updates itself. It checks in the background, or use Kasumi > Check for Updates.
 
-**Requirements:** macOS 14 (Sonoma) or newer.
+## What it does
 
-**Coming from Virga?** Kasumi is the new name of Virga. Quit Virga, then open Kasumi once: your settings, bookmarks, history, Spaces, passkeys and logins are copied over automatically (Virga's own data is left alone). Virga's built-in updater can't install Kasumi because the app ID changed, so download it from the link above one time. After that, updates are automatic.
+**Tabs and Spaces**
+- Vertical tab sidebar with pinned tabs, folders, drag to reorder, and a compact mode
+- Spaces, each with its own color, icon, cookies and logins, like separate profiles
+- Unused tabs are archived automatically, and you can restore them later
+- Reopen closed tabs, duplicate tabs, close other tabs, close tabs below, close duplicates, sort by site
+- Private tabs that save no history and are gone when you quit
 
-## Keyboard shortcuts
+**Split view**
+- Two pages side by side or stacked, with a draggable divider
+- Drag a tab to the edge of the page to split, swap sides, switch layout, click a pane to focus it
+
+**Command bar**
+- One bar for addresses, searches and switching between open tabs, with live suggestions
+- Search shortcuts: `yt cats`, `wiki tokyo`, `maps`, `reddit`, `amazon`, `github`, `imdb`, `npm`, `translate`
+- Short ones use a bang so they never fire by accident: `!g`, `!ddg`, `!w`, `!gh`, `!so`, `!a`, `!r`, `!m`, `!i`, `!t`
+
+**Reading and pages**
+- Find in page, reader view, forced dark pages, mute a tab, page zoom remembered per site
+- Save a page as PDF, copy or save a screenshot, view page source, picture in picture
+- Copy a clean link without tracking junk, copy a link as Markdown, open the clipboard in a new tab
+- Bookmarks, history and downloads in one library
+
+**Privacy**
+- Built-in ad and tracker blocker with updatable filter lists, a per-site allowlist and a shield button
+- Passkey support
+- Search suggestions and history can be turned off
+- Bring your logins over from Brave (cookies only, no passwords or extensions)
+
+**Extensions**
+- Install extensions from the Chrome Web Store and use them from the toolbar
+- Kasumi suggests uBlock Origin Lite for network-level ad blocking, including on YouTube
+- Support depends on what WebKit allows, so some Chrome extensions will not work
+
+**AI tools**
+- Let AI chat sites use this Mac with an approval prompt for each action and an activity log
+- An optional remote tool server so Claude and ChatGPT connectors can use Kasumi, with approvals
+
+**Other**
+- Cooldown timers for Spaces where you want a break between visits
+- Settings built into the window, so it works in full screen
+- Colors, theme, animated glass background and tab styling you can change
+
+## Shortcuts
 
 | Key | Action |
 |---|---|
 | ⌘T | New tab (command bar) |
-| ⌘L | Go to address / search tabs |
+| ⌘L | Go to address or search tabs |
+| ⌥⌘P | New private tab |
 | ⌘W / ⇧⌘T | Close / reopen tab |
 | ⌘1–9 | Jump to tab |
 | ⌃Tab / ⌃⇧Tab | Next / previous tab |
 | ⌘S | Toggle sidebar |
 | ⇧⌘\ | Toggle split view |
+| ⌥⌘S / ⌥⌘L | Swap split panes / stack or side by side |
 | ⌃1–9 | Switch Space |
 | ⇧⌘N | New Space |
-| ⌘[ ⌘] | Back, forward |
-| ⌘R / ⇧⌘R | Reload / reload from origin |
-| ⌘F, ⌘G / ⇧⌘G | Find in page, next / previous match |
-| ⌘= ⌘- ⌘0 | Zoom in, out, reset |
-| ⌘D | Bookmark page |
+| ⌥⌘N | New folder |
+| ⌘[ ⌘] ⌘R | Back, forward, reload or stop |
+| ⇧⌘R | Reload from origin |
+| ⌘F, ⌘G, ⇧⌘G | Find, next, previous |
+| ⌘D | Bookmark this page |
 | ⌘Y / ⇧⌘B / ⇧⌘J | History / bookmarks / downloads |
+| ⌘= ⌘- ⌘0 | Zoom in, out, actual size |
+| ⌥⌘R / ⌥⌘D | Reader view / dark page |
+| ⌃⌘M | Mute tab |
+| ⌃⌘P | Picture in picture |
+| ⌥⌘U | View page source |
+| ⌥⌘E | Save page as PDF |
+| ⇧⌘C / ⌥⇧⌘C | Copy page URL / copy clean link |
+| ⇧⌘V | Open clipboard in new tab |
 | ⌘P | Print |
-| ⇧⌘C | Copy page URL |
 | ⌘, | Settings |
-| ⌘-click a link | Open in a new tab |
+| ⌘-click link | Open in a new tab |
 
-Right-click a tab to pin it, split it, or copy its link. Right-click a Space icon to edit, reorder or delete it.
+Right-click a tab to pin it, split it or copy its link. Right-click a Space icon to rename, recolor or delete it.
 
-## Privacy
+## Not built yet
 
-- Kasumi has no accounts and no analytics.
-- Each Space keeps its cookies and site data separate from the others.
-- A few features talk to outside services, and each can be switched off in Settings: Remote AI Tools uses the relay described below, search suggestions go to your chosen search engine, favicons come from Google's favicon service, and filter lists are downloaded from their publishers.
+- Dragging tabs between Spaces
+- Pause or resume for downloads
+- Full Chrome extension compatibility, which is limited by WebKit
 
-## A note on AI Tools
+## Build from source
 
-AI Tools is optional and powerful, so treat it carefully. It lets an AI run commands and read or write files on your Mac. By default Kasumi shows an approval window for every call, and calls that look risky always ask. An "auto-allow" mode exists but is off by default; only turn it on if you understand the risk.
+You need macOS 14+ and Xcode 15+ (or the Swift 5.9 toolchain).
 
-There are two ways to use it:
+- Quick: `swift run` in this folder
+- Xcode: open `Package.swift` and press Run
+- Real app: `./build-app.sh` makes `Kasumi.app`, signed with your Apple Development certificate if you have one
+- Release: `./release.sh <version> "notes"` builds, zips and publishes to GitHub
 
-- **AI Tools** works inside the page: an AI chat site you choose (claude.ai, chatgpt.com) uses Kasumi on your Mac. Nothing leaves your Mac except what the site itself does.
-- **Remote AI Tools** lets Claude or ChatGPT on the web reach your Mac. Turn it on in Settings and Kasumi connects to a small relay and shows you a private link that ends in a long random code unique to your Mac. Paste that link into the AI service as a connector. Nothing needs installing, and nothing on your Mac listens to the internet. The relay stores nothing, but your tool calls and their results pass through it, so the person running it could technically see them. Keep your link secret: anyone who has it can send requests (which still wait for your approval) to your Mac.
+Favicons come from Google's favicon service. Swap `Favicon` in `Components.swift` if you would rather not use it.
 
-## Limitations
-
-- Kasumi uses the system WebKit engine, not Chromium, so a few sites and extensions behave differently than in Chrome.
-- Tabs can't be dragged between Spaces yet.
-- Downloads can't be paused or resumed.
-
-## Feedback
-
-Found a bug or have an idea? [Open an issue](https://github.com/RealSkyskysun/Kasumi/issues).
+If you are an AI agent working on this project, read `AGENTS.md` first.
