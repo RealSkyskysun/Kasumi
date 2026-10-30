@@ -5,7 +5,7 @@
 <h1 align="center">Kasumi</h1>
 
 <p align="center">
-  A web browser for macOS, built with SwiftUI on the WebKit engine.<br>
+  A Zen/Arc-style web browser for macOS, built with SwiftUI on the WebKit engine.<br>
   Vertical tabs, Spaces with separate logins, a built-in ad blocker, and more.
 </p>
 
@@ -84,11 +84,16 @@ Right-click a tab to pin it, split it, or copy its link. Right-click a Space ico
 
 - Kasumi has no accounts and no analytics.
 - Each Space keeps its cookies and site data separate from the others.
-- A few features talk to outside services, and each can be switched off in Settings: search suggestions go to your chosen search engine, favicons come from Google's favicon service, and filter lists are downloaded from their publishers.
+- A few features talk to outside services, and each can be switched off in Settings: Remote AI Tools uses the relay described below, search suggestions go to your chosen search engine, favicons come from Google's favicon service, and filter lists are downloaded from their publishers.
 
 ## A note on AI Tools
 
-AI Tools is optional and powerful, so treat it carefully. It lets a chat site you choose run commands and read or write files on your Mac. By default Kasumi shows an approval window for every call, and calls that look risky always ask. An "auto-allow" mode exists but is off by default; only turn it on if you understand the risk. Remote AI Tools, which exposes the same tools to AI services through a private link, always asks for approval unless you separately allow it. Keep that link secret.
+AI Tools is optional and powerful, so treat it carefully. It lets an AI run commands and read or write files on your Mac. By default Kasumi shows an approval window for every call, and calls that look risky always ask. An "auto-allow" mode exists but is off by default; only turn it on if you understand the risk.
+
+There are two ways to use it:
+
+- **AI Tools** works inside the page: an AI chat site you choose (claude.ai, chatgpt.com) uses Kasumi on your Mac. Nothing leaves your Mac except what the site itself does.
+- **Remote AI Tools** lets Claude or ChatGPT on the web reach your Mac. Turn it on in Settings and Kasumi connects to a small relay and shows you a private link that ends in a long random code unique to your Mac. Paste that link into the AI service as a connector. Nothing needs installing, and nothing on your Mac listens to the internet. The relay stores nothing, but your tool calls and their results pass through it, so the person running it could technically see them. Keep your link secret: anyone who has it can send requests (which still wait for your approval) to your Mac.
 
 ## Limitations
 
