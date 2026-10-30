@@ -5,7 +5,7 @@
 <h1 align="center">Virga</h1>
 
 <p align="center">
-  A Zen/Arc-style web browser for macOS, built with SwiftUI on the WebKit engine.<br>
+  A web browser for macOS, built with SwiftUI on the WebKit engine.<br>
   Vertical tabs, Spaces with separate logins, a built-in ad blocker, and more.
 </p>
 
